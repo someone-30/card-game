@@ -78,3 +78,9 @@ document.getElementById('reset-button').addEventListener('click', createBoard);
 
 // Initialize the game board when the script loads
 createBoard();
+
+window.addEventListener('load', () => {
+    document.querySelector('audio').play().catch(error => {
+        console.log('Autoplay prevented:', error);
+    });
+});
